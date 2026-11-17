@@ -40,7 +40,7 @@ def test_telas_scripts_e_css_do_modulo_existem(p):
                                    (JS_EQ, ["UC07", "UC08"]), (JS_COMUM, ["UC05", "UC07", "UC08"]),
                                    (CSS / "equipamentos.css", ["UC05", "UC07", "UC08"])])
 def test_arquivos_citam_uc_no_comentario_inicial(p, ucs):
-    # CLAUDE.md: toda tela cita UC e RN no comentario
+    
     inicio = ler(p)[:1500]
     for uc in ucs:
         assert uc in inicio, f"{p.name} sem {uc}"
